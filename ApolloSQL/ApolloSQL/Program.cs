@@ -121,12 +121,13 @@ namespace DemoApplication
                         cmd.Parameters.AddWithValue("@Phone", values[6]);
 
 
-                        // Parse the date field using the specified date format
+                        // a. Parse the date field using the specified date format
                         DateTime dateOfBirth = DateTime.ParseExact(values[7], inputFormat, CultureInfo.InvariantCulture, DateTimeStyles.None);
                         string output = dateOfBirth.ToString(outputFormat);
                         cmd.Parameters.AddWithValue("@DateOfBirth", output);
 
-                        // unify the jobtitle format
+                        
+                        // b. unify the jobtitle format
                         var job = values[8]; //type: string
                         //Console.WriteLine(job[0]);
                         //if start with quote
