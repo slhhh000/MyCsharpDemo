@@ -125,17 +125,8 @@ namespace DemoApplication
                         DateTime dateOfBirth = DateTime.ParseExact(values[7], inputFormat, CultureInfo.InvariantCulture, DateTimeStyles.None);
                         string output = dateOfBirth.ToString(outputFormat);
                         cmd.Parameters.AddWithValue("@DateOfBirth", output);
-                        //if (DateTime.TryParseExact(values[7], dateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out dateOfBirth))
-                        //{
-                        //    cmd.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
-                        //}
-                        //else
-                        //{
-                        //    // Handle invalid date format here (u.e. set a null value)
-                        //    cmd.Parameters.AddWithValue("@DateOfBirth", DBNull.Value);
-                        //}
 
-
+                        // unify the jobtitle format
                         var job = values[8]; //type: string
                         //Console.WriteLine(job[0]);
                         //if start with quote
